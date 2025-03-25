@@ -15,10 +15,10 @@ const WeatherInfo = () => {
     setLoading(true);
     setError('');
 
-    try {
-      const weatherResponse = await fetch(
-       url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${30bd7797c66d5554ce9fa4e047f55d24}&units=metric`
-      );
+    const weatherResponse = await fetch(
+  url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${30bd7797c66d5554ce9fa4e047f55d24}&units=metric`
+);
+
 
       if (!weatherResponse.ok) {
         throw new Error(`Error: ${weatherResponse.status} - ${weatherResponse.statusText}`);
