@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.glassCard {
+  background: rgba(243, 31, 255, 0.37); /* Semi-transparent background for glass effect */
+  backdrop-filter: blur(10px); /* Blur effect */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding around the content */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  display: flex;
+  flex-direction: column; /* Column layout for child elements */
+  align-items: center; /* Center align child elements */
+}
+
+.weather-card-header {
+  display: flex;
+  align-items: center; /* Vertically center align items */
+  justify-content: center; /* Center horizontally */
+  margin-top: 20px; /* Space from the top */
+  margin-bottom: 20px; /* Space from the bottom */
+}
+
+.weather-icon {
+  width: 50px; /* Icon size */
+  height: 50px; /* Icon size */
+  margin-right: 10px; /* Space between icon and temperature */
+}
+
+.temperature {
+  font-size: 3rem; /* Font size for temperature */
+  font-weight: bold; /* Bold font weight */
+}
+
+.weather-location {
+  font-size: 1.5rem; /* Font size for location */
+  font-weight: bold; /* Bold font weight */
+  text-align: center; /* Center alignment */
+}
+
+.weather-data {
+  display: flex;
+  justify-content: space-between; /* Space between items */
+  width: 100%; /* Full width */
+  margin-top: 20px; /* Space above */
+}
+
+.weather-data-item {
+  flex: 1; /* Flex grow for each item */
+  text-align: center; /* Center text */
+  padding: 10px; /* Padding around items */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.wind-speed {
+  background-color: #007bff; /* Blue background for wind speed */
+  color: white; /* White text color */
+}
+
+.humidity {
+  background-color: #28a745; /* Green background for humidity */
+  color: white; /* White text color */
+}
+
+.heat-index {
+  font-size: 1.2rem; /* Font size for heat index */
+  font-weight: 600; /* Semi-bold font */
+}
+
+/* Add this at the end of your index.css file */
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Space below the search bar */
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 1rem; /* Font size for input text */
+  width: 200px; /* Width of the input */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  background: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  margin-right: 10px; /* Space between input and button */
+}
+
+.search-button {
+  padding: 10px 15px; /* Padding around button text */
+  font-size: 1rem; /* Font size for button text */
+  cursor: pointer; /* Pointer cursor on hover */
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.search-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
